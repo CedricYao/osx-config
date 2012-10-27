@@ -8,8 +8,9 @@ fi
 export CLICOLOR=1
 
 # bash prompt with git ps1 and without hg-prompt
-export PS1='\[\e[0m\]________________________________________________________________________________\n\[\e[1;0m\]|\[\e[0;34m\] \w \[\e[m\]\[\e[0;32m\]@ \h [\u]\[\e[0;33m\]`(__git_ps1)` \[\e[m\]\[\e[1;0m\] \n| => \[\e[0m\]'
+#export PS1='\[\e[0m\]________________________________________________________________________________\n\[\e[1;0m\]|\[\e[0;34m\] \w \[\e[m\]\[\e[0;32m\]@ \h [\u]\[\e[0;33m\]`(__git_ps1)` \[\e[m\]\[\e[1;0m\] \n| => \[\e[0m\]'
 
-#export PS1='\[\e[0m\]________________________________________________________________________________\n\[\e[1;0m\]|\[\e[0;34m\] \w \[\e[m\]\[\e[0;32m\]@ \h [\u]\[\e[0;33m\]`(__git_ps1)`` hg prompt "{({branch}}{status}{update})" 2>/dev/null` \[\e[m\]\[\e[1;0m\] \n| => \[\e[0m\]'
+#bash prompt with git ps1 and hg-prompt
+export PS1='\[\e[0m\]________________________________________________________________________________\n\[\e[1;0m\]|\[\e[0;34m\] \w \[\e[m\]\[\e[0;32m\]@ \h [\u]\[\e[0;33m\]`(__git_ps1)` `hg prompt "{({branch}}{status}{update})" 2>/dev/null` \[\e[m\]\[\e[1;0m\] \n| => \[\e[0m\]'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
