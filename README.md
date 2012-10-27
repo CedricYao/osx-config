@@ -1,4 +1,4 @@
 OSXConfig
 =========
 
-OSX Configuration files
+My OSX configuration files.
