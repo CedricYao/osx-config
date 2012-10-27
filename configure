@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ln -s $PWD/vim/vim ~/.vim
+ln -s $PWD/vim/vimrc ~/.vimrc
+ln -s $PWD/bash/bash_profile ~/.bash_profile
