@@ -1,16 +1,9 @@
 export PATH=/usr/local/bin:$PATH
-
-# Set git autocompletion and PS1 integration
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
-
 export CLICOLOR=1
 
-# bash prompt with git ps1 and without hg-prompt
-#export PS1='\[\e[0m\]________________________________________________________________________________\n\[\e[1;0m\]|\[\e[0;34m\] \w \[\e[m\]\[\e[0;32m\]@ \h [\u]\[\e[0;33m\]`(__git_ps1)` \[\e[m\]\[\e[1;0m\] \n| => \[\e[0m\]'
-
-#bash prompt with git ps1 and hg-prompt
-export PS1='\[\e[0m\]________________________________________________________________________________\n\[\e[1;0m\]|\[\e[0;34m\] \w \[\e[m\]\[\e[0;32m\]@ \h [\u]\[\e[0;33m\]`(__git_ps1)` `hg prompt "{({branch}}{status}{update})" 2>/dev/null` \[\e[m\]\[\e[1;0m\] \n| => \[\e[0m\]'
+if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+  __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+  source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
