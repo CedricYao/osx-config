@@ -3,3 +3,4 @@
 ln -s $PWD/vim/vim ~/.vim
 ln -s $PWD/vim/vimrc ~/.vimrc
 ln -s $PWD/bash/bash_profile ~/.bash_profile
+ln -s $PWD/bash/git-prompt-colors.sh ~/.git-prompt-colors.sh
